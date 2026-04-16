@@ -9,7 +9,7 @@ import jakarta.persistence.Id;
 public class User {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	
 	private String name;
@@ -46,4 +46,9 @@ public class User {
 	public void setStatus(String status) {
 		this.status = status;
 	}
+	@Override
+	public String toString() {
+	    return "User [id=" + id + ", name=" + name + ", city=" + city + ", status=" + status + "]";
+	}
 }
+

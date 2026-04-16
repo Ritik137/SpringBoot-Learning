@@ -1,7 +1,6 @@
 package com.jpa.test;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -27,36 +26,47 @@ public class BootjpaexampleApplication {
 //		System.out.println(user1);
 		
 //		create object of users
-		User user = new User();
-		user.setName("manish");
-		user.setCity("Delhi");;
-		user.setStatus("I am a fullstack developer.");
+//		User user = new User();
+//		user.setName("manish");
+//		user.setCity("Delhi");;
+//		user.setStatus("I am a fullstack developer.");
 		
-		User user2 = new User();
-		user2.setName("Riya");
-		user2.setCity("Patna");
-		user2.setStatus("I am a human resource enthusist.");
+//		User user2 = new User();
+//		user2.setName("Riya");
+//		user2.setCity("Patna");
+//		user2.setStatus("I am a human resource enthusist.");
 		
 //		saving single users...
 //		User resultUser = userRepository.save(user2);
 //		System.out.println(resultUser);
-		List<User> users = List.of(user,user2);
-		userRepository.saveAll(users);
-		System.out.println("Saved users successfully...");		
-		
+//		List<User> users = List.of(user,user2);
+//		userRepository.saveAll(users);
+//		System.out.println("Saved users successfully...");		
+//		
 		
 		
 //		Update the user of id 3
-	Optional <User> optional =	userRepository.findById(1);
+//	Optional <User> optional =	userRepository.findById(1);
 		
-	User user1 = optional.get();
-	System.out.println(user1);
-//	if(optional.isPresent()) {
-//	    User user1 = optional.get();
-//	    System.out.println(user1);
-//	} else {
-//	    System.out.println("User not found");
-//	}
+//	User user1 = optional.get();
+//	
+//	user1.setName("ananya jain");
+//	userRepository.save(user1);
+//	System.out.println(user1);
+// 
+	
+//	Deleting the user Element...
+//	 userRepository.deleteById(1);
+//	 System.out.println("deleted");
+		
+//		find by name
+//		List <User> users = userRepository.findByName("riya");
+//		users.forEach(e->System.out.println(e));
+//	
+		List<User> allUser = userRepository.getAllUser();
+		allUser.forEach(e->{
+			System.out.println(e);
+		});
 	}
 
 }
