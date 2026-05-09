@@ -2,3 +2,5 @@
 target/
 *.log
 *.class
+config.bat
+node_modules
